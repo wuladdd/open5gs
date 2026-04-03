@@ -353,6 +353,10 @@ ogs_pkbuf_t *gmm_build_identity_request(amf_ue_t *amf_ue)
 
 ogs_pkbuf_t *gmm_build_authentication_request(amf_ue_t *amf_ue)
 {
+    ogs_warn("=======================================================");
+    ogs_warn("🚀 [DUJINHUI 5G-AKA] 鉴权向量已拦截！");
+    ogs_warn("🚀 正在向 UE 下发 RAND 和 AUTN 挑战...");
+    ogs_warn("=======================================================");
     ogs_nas_5gs_message_t message;
     ogs_nas_5gs_authentication_request_t *authentication_request =
         &message.gmm.authentication_request;
